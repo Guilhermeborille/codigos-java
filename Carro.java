@@ -54,8 +54,12 @@ public class Carro{
         return motorista;
     }
     public String toString() {
-        return "Carro [marca=" + marca + ", modelo=" + modelo + ", placa=" + placa + ", tipo do motor=" + motor.getTipo() + ", potencia do motor" + motor.getPotencia() +
-         ", nome do motorista=" + motorista.getNome() + ", CNH do motorista" + motorista.getCnh() +"]";
+        if(this.motorista == null){
+            return "Carro [marca= " + marca + ", modelo= " + modelo + ", placa= " + placa + ", tipo do motor= " + motor.getTipo() + ", potencia do motor " + motor.getPotencia() +
+            ", não tem motorista" +"]";
+        }
+        return "Carro [marca= " + marca + ", modelo= " + modelo + ", placa= " + placa + ", tipo do motor= " + motor.getTipo() + ", potencia do motor " + motor.getPotencia() +
+         ", nome do motorista= " + motorista.getNome() + ", CNH do motorista " + motorista.getCnh() +"]";
     }
     
     
